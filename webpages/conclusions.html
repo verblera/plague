@@ -1,0 +1,289 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<title>Justinianic Plague</title>
+	<meta charset="UTF-8">
+		<link rel="stylesheet" href="../styles.css">
+		<style>
+<!--w3school : responsive image grid -->
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+img {
+border-radius:5%;
+}
+
+#firstwave, #secondwave, #thirdwave, #fourthwave, #fifthwave {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#firstwave, #secondwave, #thirdwave, #fourthwave, #fifthwave:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+		</style>
+</head>
+
+<body>
+<a href="../index.html" class="button">Home</a>
+<h1>Some comments on the results </h1>
+<br>
+<p> This section provides my main conclusions on the spread analyzed with GIS. Please, <b>click on the left hand side maps  </b> to enlarge images. </p>
+<h2> First wave, 541-543 </h2>
+<div class="row">
+  <div class="column">
+   <img class="myImages" id="firstwave" src="../img/firstmap.png" alt="First Wave of Plague">
+   <div id="myModal" class="modal">
+   <span class="close">&times;</span>
+   <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+   <img src="../img/networkGrainCheese.png">
+  </div>
+  <div class="column">
+  <p><b>First map:</b> The first wave of the plague. <b>Second map: </b> The main commercial connections of the region shown with blue lines and grain and cheese production centers shown with grey circles.</p>
+   <p> The map representing the first wave of the Justinianic Plague gives a consistent insight 
+   into how the outbreak spread through the empire. The coloured circles are mainly gathered 
+   in groups with a red zone (year 541) around Pelusium, which was reported to be the first affected 
+   city. Minor Asia and Constantinople are coloured orange (year 542), as well as Sicily (December, 542), whereas Northern Africa and Italy are coloured yellow (year 543).  Sicily was affected at the end of the year 542, while Sbeitla in Tunisia has inscriptions dated back to the beginning of the next year. Seemingly, Sbeitla got the plague from Sicily because the cities were commercially connected (see the trade section).
+However, Rome with its inscriptions (which are usually quite precise and reliable in dating) reports 
+cases in November. Probably, it was not the beginning of the plague, or perhaps the connections between the southern
+ and northern Italy via ships were not used as much at this point – and instead replaced by travel over the well-developed net of the Roman roads. In the first case, what we want to say is that if we have 
+ inscriptions dated back to November, it does not mean that there were no death before or after this month, it only means that in November of 542, the plague was certainly there. Usually, the 
+ outbreak lasted for a few months, which is our date frame. It could have started in summer as well. Nevertheless,
+ it is more likely that these victims were buried before the city was overwhelmed with numerous victims. As it is said in many Greek texts, people ceased to bury their dead properly due to high mortality.
+Since Alexandria supplied Constantinople with grains, and grains for Rome were imported from
+ Northern Africa and Sicily – the vectors for the spread of the pandemics seem fair.
+<em>The main pattern of the spread is very consistent - movement anticlockwise along the coastline.</em>
+
+Some big cities (Caesarea, Beirut) on the route of the spread have no reports about the Plague but
+ we could suggest that they <em> were affected in 541 </em> as well, while Phocaea, Ephesos, Athens and other
+ cities <em> were affected in 542 </em>. All the cities on the route to Italy must have been infected before December 542. We might buffer the available data, saying that more or less the whole peninsula was affected by the end of 543. Similarly, modern Greece might have suffered from the disease in late 542 or early 543 since there was no direct commercial connection to Constantinople except indirectly through Syria. Additionally, Cappadocia, Mysia, and Bithynia had uncertainties around the dates (fall 542 or 543) but with buffering we could say that 542 is the most likely date for these territories. 
+ cities <em> were affected in 542 </em>. All the cities on the route to Italy must have been infected before December 542. We might buffer the available data, saying that more or less the whole peninsula was affected by the end of 543. Similarly, modern Greece might have suffered from the disease in late 542 or early 543 since there was no direct commercial connection to Constantinople except indirectly through Syria. Additionally, Cappadocia, Mysia, and Bithynia had uncertainties around the dates (fall 542 or 543) but with buffering we could say that 542 is the most likely date for these territories. 
+Moreover, it seems plausible that the plague came from Pelusium; vector of the spread of the disease 
+comes exactly from this area and continues throughout the empire.
+ Moreover, as it is visible from commercial networks, <em>this area was a grain exporter 
+ for Constantinople and the heartland of Byzantium</em>. 
+I could also suggest that an </em> African origin </em> of the plague is also quite possible by looking at 
+the map: the first affected territories are those in Africa, and not in the Byzantine heartland which would 
+have been a destination or a middle point for a journey from China or India. 
+</p>
+  </div>
+  
+  <h2> Second wave, 558-560 </h2>
+  <div class="column">
+      <img class="myImages" id="secondwave" src="../img/secondmap.png" alt="Second Wave of Plague">
+   <div id="myModal" class="modal">
+   <span class="close">&times;</span>
+   <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+  <img src="../img/network.png">
+  <div class="column">
+     <p><b>First map:</b> The second and third waves of the plague.
+	 <b>Second map: </b> The main commercial connections of the region shown with blue lines and centers of exported products shown with grey circles.</p>
+  <p>Only three circles date to the second wave, namely <em> Constantinople </em> in 558 (February-July) and <em> Anazarbus and Antioch </em> 
+  in 560-561 (probably, starting late 560). Both centres are reported by Theophanes the Confessor (760-817/818), 
+  which is suboptimal: other sources neither support his dates and locations nor deny them.
+  Moreover, he is a later author relying on other sources of information, seemingly lost by now. 
+Yet, analysing the map of commerce and the previous wave, such spread seems <em> plausible </em> since the regions 
+were closely connected. However, the time gap raises some questions: since it took less than a 
+year during the previous wave to cover this distance and, according to Theophanous, two years during this wave. 
+As reported by some scholars (Haldon, Commerce and Exchange; Pieri, Regional and Interregional Exchanges), the exchange rate has been deteriorating in the second half of the sixth century
+ which would explain a longer transmission period. Contrarily, there is also a less popular opinion as well that 
+ there was no significant drop.
+ </p>
+  </div>
+  
+  <h2> Third wave, 570-572 </h2>
+  <div class="column">
+      <img class="myImages" id="thirdwave" src="../img/secondmap.png" alt="Third Wave of Plague">
+   <div id="myModal" class="modal">
+   <span class="close">&times;</span>
+   <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+   <img src="../img/harbours.png">
+  </div>
+  <div class="column">
+  <p><b>First map:</b> the second and third waves of the plague.
+	 <b>Second map: </b> Ancient and Medieval ports (Harvard Dataset)</p>
+  
+    <p>The third wave lacks proper representation when applying GIS since <em> the yellow circles signify not the cities, 
+	but whole countries and areas </em> (Italy and Gaul in 570) while green ones are designated to cities
+	in modern France in 571. Unfortunately, for each year we have only one author who gives us dates and no 
+	other sources either to prove their dates or deny them. There is no reported connection between these regions, and the 
+	Harvard dataset gives no entries for harbours in this area. However, there are major rivers (such as the Loire, the Rhone), it is<em> possible </em> that the plague spread with river ships, and this information is genuine.
+Later, in 572, only Constantinople in the Eastern world reported an outbreak.
+ As during the second wave, it took longer for the disease to cross the sea and come to the ruling city,
+ twice as much as in 542-543. Once again, it might be due to some misinterpretations in dates, or, more likely at this point,
+ broken commercial connections between regions, as it is the second prolongation of the transmission pace. 
+ </p>
+  </div>
+  
+  <h2> Fourth wave, 591-592 </h2>
+  <div class="column">
+   <img class="myImages" id="fourthwave" src="../img/thirdmap.png" alt="Fourth Wave of Plague">
+   <div id="myModal" class="modal">
+   <span class="close">&times;</span>
+   <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+   <img src="../img/network.png">
+  </div>
+  <div class="column">
+  <p><b>First map:</b> The the fourth and the fifth waves of the plague.
+	 <b>Second map: </b> Grey circles representing key production centers for export, with blue lines representing main commercial connections.</p>
+    <p>Several sources document the outbreak of the plague in <em> Italy in 591 </em>.
+	Evagrius Scholasticus advocates that plague also occurred in </em> Antioch a year later </em>.
+	However, what he says is that it occurred one year before he turned fifty-eight 
+	(supposedly, he turned fifty-eight in 593/594) and reports that his daughter and grandchild
+	died of this outbreak. It seems unlikely that he could have gotten such an event wrong, so probably the 
+	outbreak did arrive in a year or less from the Italian coast to Antioch this time. It, perhaps, affected
+	the cities along the way, including Constantinople. We could suggest that <em> the trade was again flourishing </em> since 
+	there was no known direct connection between the cities but it still spread fast. </p>
+  </div>
+  
+  <h2> Fifth wave, 597-600 </h2>
+  <div class="column">
+  <img class="myImages" id="fifthwave" src="../img/thirdmap.png" alt="Fifth Wave of Plague">
+   <div id="myModal" class="modal">
+   <span class="close">&times;</span>
+   <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+   <img src="../img/network.png">
+  </div>
+  <div class="column">
+  <p><b>First map:</b> The the fourth and the fifth waves of the plague.
+	 <b>Second map: </b> Grey circles representing key production centers for export, with blue lines representing main commercial connections.</p>
+    <p>This one is very confusing since the dates coming from the chronicle of Michael the Syrian have
+	<em> a large time gap (either 595 or 599)</em>. According to the Chronicle, the plague took the life of the patriarch 
+	of Constantinople, John, which happened in 595. Elias of Nisibis states that, according to the Syrian calendar, the death occurred in year 911, but Little suggests that we need to see this date as 599. Additionally, we have no reports on outbreaks in 596 or 597 while usually the plague penetrates more cities. 
+The same <em> confusion </em> appears around the city of Thessalonica: while <em> Little suggests 597, Lemerle insists on the year
+ 586</em>. The plague in Thessalonica is the first case when an outbreak is reported in Peloponnese. Later,
+ <em> in 598-599, Theophylactus Simocatta reports deaths of the bubonic plague among the avars </em> where children of Khan got
+ such symptoms as buboes and vomiting. 
+Overall, definition of timeframe of the fifth wave of the plague on Greek soil is very problematic.
+
+A clearer situation is <em> in Italy where in 599, Gregory the Great sends over letters </em> with dates complaining about 
+the great mortality and <em> Paul the Deacon reports outbreaks in Ravenna  and Verona the next year </em> 
+(in reality, a few months later). The Italian sources look more consistent and logical: the same few months were all that were needed for the spread from Gaza to Negev in 541. 
+Little tries to get a vector of the disease: <em> the avars -> Thessalonica -> Asia Minor -> Italy -> 
+Ravenna </em> which might be an option, but it is <em> inconsistent </em> with the previous waves and <em> does not  look very persuasive </em> 
+when visualised.
+ </p>
+  </div>
+</div>
+
+<script>
+//https://stackoverflow.com/questions/47798971/several-modal-images-on-page
+// Get the modal
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+</body>
+</html>
